@@ -1,7 +1,10 @@
 package com.oopology;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+
+import java.util.regex.Pattern;
 
 public class OopologyPage {
     private final Page page;
@@ -36,4 +39,7 @@ public class OopologyPage {
         page.getByLabel("Password:").fill(password);
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).click();
     }
+//    public void checkAssessmentOption(String question, String option){
+//        page.getByText(question).locator("input."+ option).click();
+//    }
 }
